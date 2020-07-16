@@ -26,6 +26,6 @@ func FileExists(filename string) bool {
 func CreateBackupDirectory(path string) {
 	_, err := os.Stat(path)
 	if os.IsNotExist(err) {
-		os.MkdirAll(path, os.FileMode(0777))
+		os.MkdirAll(path, os.FileMode(0760))
 	}
 }
