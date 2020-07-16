@@ -13,7 +13,7 @@ database:
 # Backup confuration
 backup:
   # Path to folder where the files will be saved
-  path_directory: "/home/desenv0/Projetos/go/src/pgbackup/files"
+  path_directory: "/backups/pgbackup/files"
 
   # Selects the format of the output. format can be one of the following:
   # plain, custom, directory, tar
