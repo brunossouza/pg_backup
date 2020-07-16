@@ -1,0 +1,7 @@
+files/*
+build/*
+
+*.sql
+*.tar
+*.backup
+*.yml

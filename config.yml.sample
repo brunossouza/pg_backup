@@ -1,0 +1,32 @@
+# Server configurations
+server:
+  # Enter the server ip
+  host: "127.0.0.1"
+  # Enter the port number
+  port: "5432"
+
+# Database credentials
+database:
+  user: "postgres"
+  pass: "postgres"
+
+# Backup confuration
+backup:
+  # Path to folder where the files will be saved
+  path_directory: "/home/desenv0/Projetos/go/src/pgbackup/files"
+
+  # Selects the format of the output. format can be one of the following:
+  # plain, custom, directory, tar
+  # https://www.postgresql.org/docs/current/app-pgdump.html
+  format: custom
+
+  # By default, all databases on the server are backed up, except: 'postgres', 'template0', 'template1'.
+  #
+  # To backup one or a list of databases, create a list like the example below
+  # Example:
+  # For a list:
+  # databases: ["database01","database02","databaseN"]
+  # For a single database:
+  # databases: ["database01"]
+  # For all databases from server, except: 'postgres', 'template0', 'template1':
+  databases: ["all"]
