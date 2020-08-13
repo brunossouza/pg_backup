@@ -9,8 +9,8 @@ import (
 )
 
 // ExecBackup ExecBackup
-func ExecBackup(host string, port string, username string, password string, dbname string, tipo string, saveFile string) {
-	cmd := exec.Command("/usr/bin/pg_dump", "--host="+host, "--port="+port, "--username", username, "--role=postgres", "--no-password", "--format="+tipo, "--blobs", "--encoding=UTF8", "--file="+saveFile, dbname)
+func ExecBackup(host string, port string, username string, password string, dbname string, encoding string, tipo string, saveFile string) {
+	cmd := exec.Command("/usr/bin/pg_dump", "--host="+host, "--port="+port, "--username", username, "--role=postgres", "--no-password", "--format="+tipo, "--blobs", "--encoding="+encoding, "--file="+saveFile, dbname)
 
 	buffer := bytes.Buffer{}
 	buffer.Write([]byte(password))

@@ -20,6 +20,7 @@ type Config struct {
 		Directory    string   `yaml:"path_directory"`
 		BackupFormat string   `yaml:"format"`
 		Databases    []string `yaml:"databases"`
+		Encode       string   `yaml:"encode"`
 	} `yaml:"backup"`
 }
 

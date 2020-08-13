@@ -78,7 +78,7 @@ func main() {
 
 	for _, table := range tables {
 		var path = fmt.Sprintf("%s/%s.%s", dirPath, table, backupFormats[cfg.Backup.BackupFormat])
-		controllers.ExecBackup(cfg.Server.Host, cfg.Server.Port, cfg.Database.Username, cfg.Database.Password, table, cfg.Backup.BackupFormat, path)
+		controllers.ExecBackup(cfg.Server.Host, cfg.Server.Port, cfg.Database.Username, cfg.Database.Password, table, cfg.Backup.Encode, cfg.Backup.BackupFormat, path)
 		if verbose {
 			fmt.Printf("Database:\t%s\nSaved in:\t%s\n\n", table, path)
 		}
